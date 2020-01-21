@@ -35,11 +35,14 @@ class Import extends DbConn {
         $import_sql .= "country_1 = '', proprietor_1_add_1 = @col13, proprietor_1_add_2 = @col14, proprietor_1_add_3 = @col15, proprietor_name_2 = @col16, company_reg_no_2 = @col17, proprietorship_cat_2 = @col18, country_2 = '', proprietor_2_add_1 = @col19, proprietor_2_add_2 = @col20, proprietor_2_add_3 = @col21, proprietor_name_3 = @col22, company_reg_no_3 = @col23, proprietorship_cat_3 = @col24, country_3 = '', proprietor_3_add_1 = @col25, proprietor_3_add_2 = @col26, proprietor_3_add_3 = @col27, proprietor_name_4 = @col28, company_reg_no_4 = @col29, proprietorship_cat_4 = @col30, country_4 = '', proprietor_4_add_1 = @col31, proprietor_4_add_2 = @col32, proprietor_4_add_3 = @col33, date_added = concat(substring(@col34, -4, 4), substring(@col34, -7, 2), substring(@col34, 1, 2)), more_proprietors = @col35";
       }
 
-      $this->conn->query($import_sql);
+      echo $import_sql;
+      exit();
 
-      $this->created_rows = $this->conn->affected_rows;
-
-      header("Location: index.php?created_rows=" . $this->created_rows . "&deleted_rows=" . $this->deleted_rows);
+      // $this->conn->query($import_sql);
+      //
+      // $this->created_rows = $this->conn->affected_rows;
+      //
+      // header("Location: index.php?created_rows=" . $this->created_rows . "&deleted_rows=" . $this->deleted_rows);
 
     }
 
