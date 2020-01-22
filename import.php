@@ -33,7 +33,7 @@ Is this a <label>UK <input type="radio" name="list_type" value="uk" checked></la
 
 <br><br>
 
-<label>Empty the database first? <input type="checkbox" name="delete"></label>
+<label>Empty the database (and recreate the table) first? <input type="checkbox" name="delete"></label>
 
 <br><br><br>
 
